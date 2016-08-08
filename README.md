@@ -20,7 +20,7 @@ I will start with a simple functionality like turning the room’s light on.
 * 2 Arduino Microcontrollers (e.g. UNO or Nano , Pro mini )  ,Refer to Shrinking your project previous Post ! 
 * 2 nrf24L01 devices
 * 2x16 LED screen
-* Servo Motor
+* DC Motor
 * Buzzer
 
 
