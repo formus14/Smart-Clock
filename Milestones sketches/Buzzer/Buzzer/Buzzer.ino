@@ -1,19 +1,22 @@
-int speakerPin = 8;
- 
-int numTones = 10;
-int tones[] = {261, 277, 294, 311, 330, 349, 370, 392, 415, 440};
-//            mid C  C#   D    D#   E    F    F#   G    G#   A
- 
+int buzzer=8;
+int flag=0; 
 void setup()
 {
-  for (int i = 0; i < numTones; i++)
-  {
-    tone(speakerPin, tones[i]);
-    delay(500);
-  }
-  noTone(speakerPin);
+  pinMode(buzzer,OUTPUT);
 }
- 
 void loop()
 {
+  int i;
+  if ( flag== 0){
+    for(i=0;i<255;i++) //output sound of one frequency
+    {
+      digitalWrite(buzzer,HIGH);//make a sound
+      delay(1);//delay 1ms
+      digitalWrite(buzzer,LOW);//silent
+      delay(1);//delay 1ms
+    }
+    flag=1;
+    digitalWrite(buzzer,LOW);//silent
+
+  }
 }
